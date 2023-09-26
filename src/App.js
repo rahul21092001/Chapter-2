@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Userprofile from "./Components/Userprofile";
+import Form from "./Components/Form";
+import Namelist from "./Components/Namelist";
+import Counter from "./Components/Counter";
 
-function App() {
+const App = () => {
+  const name = "rahul";
+  const age = 22;
+  const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <Userprofile name={name} age={age} />
+      <Form />
+      <Namelist names={names} />
+      <Counter/>
     </div>
   );
-}
+};
 
 export default App;
